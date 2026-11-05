@@ -34,7 +34,7 @@ test("Post Booking - CreateBooking -cadastro de reserva", async ({ request }) =>
 })
 
 
-test("Post auth -gerar token", async ({ request }) => { 
+test("Post auth -gerar token @regressivo", async ({ request }) => { 
     //faz uma requisição POST para a API gerar token com os dados do usuário
     const response = await request.post("/auth", {
         data: {
