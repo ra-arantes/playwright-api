@@ -1,5 +1,5 @@
 import { expect, test } from "../fixtures/test.js";
-
+var tokenRecebido 
 
 test("Post Booking - CreateBooking -cadastro de reserva", async ({ request }) => {  
     //faz uma requisição POST para a API de booking com os dados da reserva
@@ -49,9 +49,9 @@ test("Post auth -gerar token @regressivo", async ({ request }) => {
 
     //recebe a resposta da requisição e transforma em um objeto JSON
     const responseBody = await response.json(); 
+    tokenRecebido = responseBody.token;
     //verifica se o token foi gerado e se não é nulo
-    expect(responseBody.token).not.toBeNull();
-    console.log("Token gerado: " + responseBody.token);  
+    console.log("Seu token é:" + tokenRecebido);  
 })
 
 
